@@ -1,0 +1,271 @@
+---
+layout: default
+title: Research 
+---
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+	* {
+	  box-sizing: border-box;
+	}
+	
+
+	figure {
+	  display: inline-block;
+	  text-align: center;
+	}  
+	  
+	figure figcaption {
+	    text-align: center;
+	}
+	
+
+	/* Create two equal columns that floats next to each other */
+	.column {
+	  float: left;
+	  width: 33%;
+	  padding: 10px;
+	}
+	
+
+	.column img {
+	  margin-top: 12px;
+	}
+	
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* NOW GRID */
+
+	.grid {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  justify-items: center;
+	  align-items: center;
+	  column-gap: 15px;
+	  row-gap:  15px;
+	  padding: 25px;
+	}
+	
+	
+	
+	.flip-card {
+	  border-style: hidden;
+	  background-color: transparent;
+	  width: 240px;  
+	  height: 240px;  
+	  perspective: 1000px;
+	}
+
+
+	.flip-card-inner {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	  text-align: center;
+	  transition: transform 0.6s;
+	  transform-style: preserve-3d;
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.flip-card:hover .flip-card-inner {
+	  transform: rotateY(180deg);
+	}
+
+	.flip-card-front,
+	.flip-card-back {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  backface-visibility: hidden;
+	}
+
+	.flip-card-front {
+	  background-color: #ffffff;
+	  color: black;
+	}
+
+	.flip-card-back {
+	  background-color: #F4F6F6;
+	  color: #DF8E72;
+	  transform: rotateY(180deg);
+	  padding: 12px 12px 12px 12px;
+	}
+
+	
+	p {
+  	font-size: 16px;
+	}
+	
+	h2 {
+  	font-size: 20px;
+	}
+
+</style>
+</head>
+<body>
+
+ <h1 style="text-align:center;font-family:optima;margin-bottom:0.0em"> A Brief History of Research Projects </h1>
+  
+<p style="text-align:center;font-size:18px"><i>“In the beginning the Universe was created. This had made many people very angry and has been widely regarded as a bad move.” </i></p>
+
+<p style="text-align:right;font-size:18px"> ― Douglas Adams, The Restaurant at the End of the Universe </p>
+
+<!-- Flip Grid -->
+  <div class="container">
+    <div class="grid">
+      <!-- #Row 1 -->
+      <!-- #(1,1) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="dmhalo.png" style="width:100%" title="DM Haloes" alt="Fuzzy">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/abaddon_lg.png" alt="Avatar" style="width:120px;height:120px;" />  -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Dark Matter Haloes</h2>
+            <p style="text-align:left"><b>Code</b>: <a href="https://chapel-lang.org/poweredby.html">chplUltra</a> (Chapel)</p>
+	    <p style="text-align:justify"> Testing ultralight dark matter by comparing simulation results with observational data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #(1,2) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="bigdipper.png" style="width:100%" title="Archaeoastronomy" alt="Decans">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/alchemist_lg.png" alt="Avatar" style="width:120px;height:120px;" /> -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Egyptian Constellations</h2>
+            <p style="text-align:left"><b>Code</b>: <a href="https://github.com/lunazagor/decanOpy">decanO.py</a> (astropy)</p>
+	    <p style="text-align:justify"> Mapping Ancient Egyptian constellations to explore stellar timekeeping practices.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #(1,3) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="blackhole.png" style="width:100%" title="Black Hole" alt="PBH">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/axe_lg.png" alt="Avatar" style="width:120px;height:120px;" /> -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Primordial Black Holes</h2>
+            <p style="text-align:left"><b>Code</b>: Mathematica</p>
+	    <p style="text-align:justify"> Calculated gravitational wave signatures of primorial black hole mergers in the early universe.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #Row 2 -->
+      <!-- #(2,1) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="galaxy.png" style="width:100%" title="Galaxy" alt="Boas">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/beastmaster_lg.png" alt="Avatar" style="width:120px;height:120px;" /> -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Galaxy Bias</h2>
+            <p style="text-align:left"><b>Code</b>: C/C++</p>
+	    <p style="text-align:justify"> Made mock data to test bispectrum and power spectrum analysis code being developed for <a href="https://www.desi.lbl.gov/">DESI.</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- #(2,2) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="bigbang.png" style="width:100%" title="Inflation" alt="WIMP">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/abaddon_lg.png" alt="Avatar" style="width:120px;height:120px;" /> -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Inflation & Dark Matter</h2>
+            <p style="text-align:left"><b>Code</b>: Wim.Py (Python)</p>
+	    <p style="text-align:justify"> Calculated WIMPzilla dark matter production through inflaton-field coupling for sigmoid inflation models.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- #(2,3) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="quasar.png" style="width:100%" title="Quasar" alt="AGN">
+            <!-- <img src="img/heroes_thumbnail/heroes_thumbnail_large/alchemist_lg.png" alt="Avatar" style="width:120px;height:120px;" /> -->
+          </div>
+          <div class="flip-card-back">
+	    <h2>Quasars</h2>
+            <p style="text-align:left"><b>Code</b>: Pascal, IRAF, Image J</p>
+	    <p style="text-align:justify"> Observed quasar 3C 454.3 during its historic flare in summer 2014 at <a href="http://observatory.colgate.edu/">Foggy Bottom Observatory</a>.</p>
+          </div>
+        </div>
+      </div>
+  
+
+
+<!-- Photo Grid -->    
+<!--
+	    <div class="row">
+	  <div class="column">
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="dmhalo.png" style="width:100%" title="DM Haloes" alt="Fuzzy"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Dark Matter Haloes </a> </figcaption>
+	  </figure>
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="galaxy.png" style="width:100%" title="Galaxy" alt="Boas"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Galaxy Bias </a> </figcaption>
+	  </figure>
+	  </div>
+	  <div class="column">
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="bigdipper.png" style="width:100%" title="Archaeoastronomy" alt="Decans"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Egyptian Constellations </a> </figcaption>
+	  </figure>
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="bigbang.png" style="width:100%" title="Inflation" alt="WIMP"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Inflaton & Dark Matter </a> </figcaption>
+	  </figure>
+	  </div>
+	  <div class="column">
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="blackhole.png" style="width:100%" title="Black Hole" alt="PBH"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Primordial Black Holes </a> </figcaption>
+	  </figure>
+	  </figure>
+	  <figure class="gallery__item gallery__item--6">
+	    <a href="https://lunazagor.github.io/"><img src="quasar.png" style="width:100%" title="Quasar" alt="AGN"></a>
+	    <figcaption> <a href="https://lunazagor.github.io/"> Quasars </a> </figcaption>
+	  </figure>
+	  </div>
+	</div>
+	</body>
+	</html>
+-->
+
+
+
+</body>
+</html>
+  
+  
